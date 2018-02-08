@@ -1,0 +1,41 @@
+.control-box {
+  width: 500px;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+  border: 3px solid #4CAF50;
+  border-radius: 10px;
+  padding: 10px;
+}
+.input-field {
+  width: 300px;
+  margin: 15px auto -25px auto;
+}
+
+.random-link {
+  font-size: 20px;
+  color: #F44336;
+}
+.random-link:hover {
+  color: #FF9800;
+}
+p {
+  font-weight : bold;
+}
+
+.panel {
+  background-color: #7986CB;
+  padding: 10px;
+  margin: 10px;
+}
+.panel:hover {
+  border-left: 3px solid #FF9800;
+}
+.panel h5 {
+  color: #FF9800;
+  font-weight: bold;
+}
+.panel p {
+  color: white;
+  font-size: 20px;
+}

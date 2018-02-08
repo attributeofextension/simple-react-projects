@@ -7,6 +7,7 @@ const Header = () => {
   <div>
     <ul id="dropdown1" className="dropdown-content">
       <li ><Link to="/quotegenerator">Random Quote Generator</Link></li>
+      <li><Link to="/wikipediasearch">Wikipedia Search</Link></li>
     </ul>
     <nav>
       <div className="nav-wrapper header">

@@ -4,7 +4,9 @@ import LandingPage from '../components/LandingPage';
 import RandomQuoteGenerator from './RandomQuoteGenerator';
 import LinksPage from '../components/LinksPage';
 import AboutPage from '../components/AboutPage';
+import WikipediaSearch from './WikipediaSearch';
 import Header from '../components/Header';
+
 
 
 class App extends Component {
@@ -17,6 +19,7 @@ class App extends Component {
           <Route exact path="/about" component={AboutPage} />
           <Route exact path="/links" component={LinksPage} />
           <Route exact path='/quotegenerator' component={RandomQuoteGenerator} />
+          <Route exact path='/wikipediasearch' component={WikipediaSearch} />
         </div>
       </BrowserRouter>
     );
