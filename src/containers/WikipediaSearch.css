@@ -14,12 +14,12 @@
 
 .random-link {
   font-size: 20px;
-  color: #F44336;
-}
-.random-link:hover {
   color: #FF9800;
 }
-p {
+.random-link:hover {
+  color: #FFB74D;
+}
+.wiki-search p {
   font-weight : bold;
 }
 
@@ -27,6 +27,7 @@ p {
   background-color: #7986CB;
   padding: 10px;
   margin: 10px;
+  box-shadow: 2px 2px 4px 0px HSLa(200,100%,10%,.9);
 }
 .panel:hover {
   border-left: 3px solid #FF9800;

@@ -1,0 +1,14 @@
+.temp-unit {
+  color: #E91E63;
+}
+.weather-app p {
+  font-size: 20px;
+}
+.weather-app {
+  padding-bottom: 20px;
+  width : 500px;
+  margin: auto;
+  margin-top: 40px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px 0px HSLa(200,100%,10%,.9);
+}

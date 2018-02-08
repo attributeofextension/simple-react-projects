@@ -22,7 +22,7 @@ class RandomQuoteGenerator extends Component {
     const authorURI = encodeURIComponent(' -' + this.props.quote.author);
     const contentURI = encodeURIComponent('"' + this.props.quote.content + '"');
     return (
-        <div className="card" style={{border:"5px solid " + quoteColor }}>
+        <div className="card quote-gen" style={{border:"5px solid " + quoteColor }}>
           <div className="card-content" style={{color:quoteColor}}>
             <p>{this.props.quote.content}</p>
             <h6>&mdash;{this.props.quote.author}</h6>

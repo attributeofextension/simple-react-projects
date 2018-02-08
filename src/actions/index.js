@@ -1,10 +1,17 @@
+import keys from './keys';
 import quotes from '../resources/quotes';
 import quoteColors from '../resources/quoteColors';
-import { FETCH_RANDOM_QUOTE, FETCH_RANDOM_QUOTE_COLOR, SEARCH_WIKIPEDIA } from './types';
+import { FETCH_RANDOM_QUOTE, 
+         FETCH_RANDOM_QUOTE_COLOR, 
+         SEARCH_WIKIPEDIA, 
+         FETCH_WEATHER,
+         FETCH_MAP_DATA} from './types';
 import {makeWikipediaURL} from './helpers';
 import axios from 'axios';
 
 const wikipediaAPIBaseURL = "https://en.wikipedia.org/w/api.php?origin=*&action=opensearch&search=";
+const openWeatherBaseURL = "http://api.openweathermap.org/data/2.5/weather?APPID=";
+const googleMapsBaseURL = "https://maps.google.com/maps/api/geocode/json?result_type=locality&key=";
 
 //Random Quote Generator
 export const fetchRandomQuote = (oldQuote) => {
@@ -40,5 +47,17 @@ export const searchWikipedia = (term) => {
     }
 
     dispatch({type: SEARCH_WIKIPEDIA, payload: sorted });
+  }
+}
+export const fetchWeather = (lat,lon) => {
+  return async (dispatch) => {
+    const res = await axios.get(`${openWeatherBaseURL}${keys.openWeatherAPIKey}&lat=${lat}&lon=${lon}`);
+    dispatch({type: FETCH_WEATHER, payload: res.data });
+  }
+}
+export const fetchMapData = (lat,lon) => {
+  return async (dispatch) => {
+    const res = await axios.get(`${googleMapsBaseURL}${keys.googleMapsAPIKey}&latlng=${lat},${lon}`);
+    dispatch({type: FETCH_MAP_DATA, payload: res.data.results[res.data.results.length-1].formatted_address });
   }
 }

@@ -1,0 +1,31 @@
+.landing-panel {
+  background-color: #2196F3;
+  color: white;
+  box-shadow: 2px 2px 4px 0px HSLa(200,100%,10%,.9);
+}
+.landing-panel-pink { 
+  background-color: #E91E63;
+  color: white;
+  box-shadow: 2px 2px 4px 0px HSLa(200,100%,10%,.9);
+}
+.landing-panel-green { 
+  background-color: #4CAF50;
+  color: white;
+  box-shadow: 2px 2px 4px 0px HSLa(200,100%,10%,.9);
+}
+
+.landing-panel-pink:hover {
+  border: 2px solid #FFEB3B;
+}
+.landing-panel-green:hover {
+  border: 2px solid #FFEB3B;
+}
+.landing-panel h5 {
+  color: white;
+}
+.landing-panel:hover {
+  border: 2px solid #FFEB3B;
+}
+.landing-link {
+  color: white;
+}

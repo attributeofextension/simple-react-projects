@@ -9,8 +9,10 @@ class WikipediaSearch extends Component {
     super(props);
     this.state = { term: "" };
     this.handleChange = this.handleChange.bind(this);
+    this.renderContent = this.renderContent.bind(this);
   }
   renderContent() {
+    
     return this.props.searchResults.map((result) => {
       return (<a href={result.link} target="_blank" key={result.link}>
                 <li className="panel">
@@ -28,9 +30,8 @@ class WikipediaSearch extends Component {
     throttled();
   }
   render() {
-    console.log(this.props.searchResults);
     return (
-    <div>
+    <div className="wiki-search">
       <div className="control-box">
         <a className="random-link" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Click here for a random article</a>
         <div className="input-field">

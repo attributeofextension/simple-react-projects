@@ -5,9 +5,8 @@ import RandomQuoteGenerator from './RandomQuoteGenerator';
 import LinksPage from '../components/LinksPage';
 import AboutPage from '../components/AboutPage';
 import WikipediaSearch from './WikipediaSearch';
+import WeatherApp from './WeatherApp';
 import Header from '../components/Header';
-
-
 
 class App extends Component {
   render() {
@@ -20,6 +19,7 @@ class App extends Component {
           <Route exact path="/links" component={LinksPage} />
           <Route exact path='/quotegenerator' component={RandomQuoteGenerator} />
           <Route exact path='/wikipediasearch' component={WikipediaSearch} />
+          <Route exact path='/weatherapp' component={WeatherApp} />
         </div>
       </BrowserRouter>
     );
