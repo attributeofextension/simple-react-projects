@@ -2,11 +2,6 @@
   "name": "simple-react-projects",
   "version": "0.1.0",
   "private": true,
-  "proxy": {
-    "https://wind-bow.gomix.me/*": {
-      "target": "https://wind-bow.gomix.me/"
-    }
-  },
   "dependencies": {
     "axios": "^0.17.1",
     "materialize-css": "^0.100.2",
