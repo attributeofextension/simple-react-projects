@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "../../node_modules/weather-icons-master/css/weather-icons.min.css";
+import "../resources/weather-icons-master/css/weather-icons.min.css";
 import WeatherIcons from 'react-weathericons';
 
 
