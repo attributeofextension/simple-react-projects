@@ -1,0 +1,48 @@
+.twitch {
+  width: 800px;
+}
+.twitch-header {
+  background-color: #6441a4;
+  color: white;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.twitch-nav {
+  border : 1px solid grey;
+  border-radius: 3px;
+  font-size : 25px;
+  margin: 5px;
+  padding: 0px 5px;
+  color: white;
+}
+.twitch-nav:hover { 
+  background-color: #815FC0;
+}
+.twitch-nav-active {
+  background-color: #815FC0;
+}
+.twitch-li {
+  background-color: #815FC0;
+  margin: 10px 0px -10px 0px;
+}
+.twitch-li-offline {
+  background-color: #BDBDBD !important;
+}
+.twitch-li img {
+  width: 60px;
+  border-radius: 50%;
+}
+.twitch-li a {
+  margin: 0px 40px;
+  color: #FF9800;
+  font-size: 20px;
+}
+.twitch-li a:hover {
+  color: #FFD54F;
+}
+.twitch-li p {
+  color: white;
+}
+.text-white { 
+  color: white;
+}

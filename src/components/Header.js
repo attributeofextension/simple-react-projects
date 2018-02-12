@@ -9,6 +9,7 @@ const Header = () => {
       <li ><Link to="/quotegenerator">Random Quote Generator</Link></li>
       <li><Link to="/wikipediasearch">Wikipedia Search</Link></li>
       <li><Link to="/weatherapp">Weather App</Link></li>
+      <li><Link to='/twitchtracker'>Twitch.tv Tracker</Link></li>
     </ul>
     <nav>
       <div className="nav-wrapper header">

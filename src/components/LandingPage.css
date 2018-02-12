@@ -1,14 +1,17 @@
 .landing-panel {
-  background-color: #2196F3;
+  height: 150px;
   color: white;
   box-shadow: 2px 2px 4px 0px HSLa(200,100%,10%,.9);
 }
-.landing-panel-pink { 
+.blue {
+  background-color: #2196F3;
+}
+.pink { 
   background-color: #E91E63;
   color: white;
   box-shadow: 2px 2px 4px 0px HSLa(200,100%,10%,.9);
 }
-.landing-panel-green { 
+.green { 
   background-color: #4CAF50;
   color: white;
   box-shadow: 2px 2px 4px 0px HSLa(200,100%,10%,.9);

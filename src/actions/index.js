@@ -5,13 +5,16 @@ import { FETCH_RANDOM_QUOTE,
          FETCH_RANDOM_QUOTE_COLOR, 
          SEARCH_WIKIPEDIA, 
          FETCH_WEATHER,
-         FETCH_MAP_DATA} from './types';
+         FETCH_MAP_DATA,
+         FETCH_TWITCH_DATA} from './types';
 import {makeWikipediaURL} from './helpers';
 import axios from 'axios';
+import $ from "jquery"
 
 const wikipediaAPIBaseURL = "https://en.wikipedia.org/w/api.php?origin=*&action=opensearch&search=";
 const openWeatherBaseURL = "http://api.openweathermap.org/data/2.5/weather?APPID=";
 const googleMapsBaseURL = "https://maps.google.com/maps/api/geocode/json?result_type=locality&key=";
+const twitchAPIBaseURL = "https://wind-bow.gomix.me/twitch-api/";
 
 //Random Quote Generator
 export const fetchRandomQuote = (oldQuote) => {
@@ -59,5 +62,34 @@ export const fetchMapData = (lat,lon) => {
   return async (dispatch) => {
     const res = await axios.get(`${googleMapsBaseURL}${keys.googleMapsAPIKey}&latlng=${lat},${lon}`);
     dispatch({type: FETCH_MAP_DATA, payload: res.data.results[res.data.results.length-1].formatted_address });
+  }
+}
+export const fetchTwitchData = (name) => {
+  return async (dispatch) => {
+    
+    $.getJSON(`${twitchAPIBaseURL}streams/${name}?callback=?`,
+      (stream) => {
+        let game = "";
+        let online = false;
+        if(stream.stream === null) {
+          online = false;
+        } else {
+          game = stream.stream.game;
+          online = true;
+        }
+
+        $.getJSON(`${twitchAPIBaseURL}channels/${name}?callback=?`,
+          (channel) => {
+            const res = {
+              logo: channel.logo,
+              channel: channel.display_name,
+              description: channel.status,
+              link: channel.url,
+              game: game,
+              online: online
+            }
+          dispatch({type: FETCH_TWITCH_DATA, payload: res });
+          });
+    });
   }
 }

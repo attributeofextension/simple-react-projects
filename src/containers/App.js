@@ -6,6 +6,7 @@ import LinksPage from '../components/LinksPage';
 import AboutPage from '../components/AboutPage';
 import WikipediaSearch from './WikipediaSearch';
 import WeatherApp from './WeatherApp';
+import TwitchTracker from './TwitchTracker';
 import Header from '../components/Header';
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
           <Route exact path='/quotegenerator' component={RandomQuoteGenerator} />
           <Route exact path='/wikipediasearch' component={WikipediaSearch} />
           <Route exact path='/weatherapp' component={WeatherApp} />
+          <Route exact path="/twitchtracker" component={TwitchTracker} />
         </div>
       </BrowserRouter>
     );
