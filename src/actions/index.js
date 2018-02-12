@@ -9,7 +9,7 @@ import { FETCH_RANDOM_QUOTE,
          FETCH_TWITCH_DATA} from './types';
 import {makeWikipediaURL} from './helpers';
 import axios from 'axios';
-import $ from "jquery"
+import $ from "jquery";
 
 const wikipediaAPIBaseURL = "https://en.wikipedia.org/w/api.php?origin=*&action=opensearch&search=";
 const openWeatherBaseURL = "https://api.openweathermap.org/data/2.5/weather?APPID=";
@@ -54,6 +54,7 @@ export const searchWikipedia = (term) => {
 }
 export const fetchWeather = (lat,lon) => {
   return async (dispatch) => {
+    console.log(keys.openWeatherAPIKey);
     const res = await axios.get(`${openWeatherBaseURL}${keys.openWeatherAPIKey}&lat=${lat}&lon=${lon}`);
     dispatch({type: FETCH_WEATHER, payload: res.data });
   }
