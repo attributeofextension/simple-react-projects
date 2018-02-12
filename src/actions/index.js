@@ -12,7 +12,7 @@ import axios from 'axios';
 import $ from "jquery"
 
 const wikipediaAPIBaseURL = "https://en.wikipedia.org/w/api.php?origin=*&action=opensearch&search=";
-const openWeatherBaseURL = "http://api.openweathermap.org/data/2.5/weather?APPID=";
+const openWeatherBaseURL = "https://api.openweathermap.org/data/2.5/weather?APPID=";
 const googleMapsBaseURL = "https://maps.google.com/maps/api/geocode/json?result_type=locality&key=";
 const twitchAPIBaseURL = "https://wind-bow.gomix.me/twitch-api/";
 
