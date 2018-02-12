@@ -1,0 +1,11 @@
+.about-page {
+
+  width: 600px;
+  text-align: center;
+}
+.about-page a {
+  color: #4CAF50;
+}
+.about-page a:hover {
+  color: #FFC107;
+}

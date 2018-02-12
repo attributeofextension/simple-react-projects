@@ -1,4 +1,4 @@
-import keys from './keys';
+import keys from '../config/keys';
 import quotes from '../resources/quotes';
 import quoteColors from '../resources/quoteColors';
 import { FETCH_RANDOM_QUOTE, 

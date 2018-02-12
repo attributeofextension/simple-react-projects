@@ -20,7 +20,6 @@ const Header = () => {
             <li><a className="dropdown-button" href="#!" data-activates="dropdown1">
             Projects<i className="material-icons right">arrow_drop_down</i></a>
             </li>
-            <li><Link to="/links">Links</Link></li>
           </ul>
         </div>
       </div>
